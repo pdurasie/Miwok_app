@@ -5,7 +5,7 @@ public class Word {
     private String mMiwokWord;
     private String mDefaultWord;
 
-    public Word(String miwokWord, String defaultWord){
+    public Word(String defaultWord, String miwokWord){
         mMiwokWord = miwokWord;
         mDefaultWord = defaultWord;
     }
