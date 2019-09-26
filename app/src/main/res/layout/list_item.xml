@@ -40,6 +40,7 @@
             android:id="@+id/play_btn"
             android:layout_width="24dp"
             android:layout_height="24dp"
+            android:layout_marginRight="16dp"
             android:layout_gravity="center"
             android:src="@drawable/ic_play_btn"
             />
