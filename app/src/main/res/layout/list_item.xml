@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:id="@+id/text_container"
     style="@style/general_list_item">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="horizontal">
 
         <ImageView
@@ -16,19 +17,32 @@
             />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:orientation="vertical">
             <TextView
                 style="@style/text_view_in_list"
                 android:textStyle="bold"
                 android:id="@+id/miwok_text_view"
+                tools:text="miwok"
                 />
 
             <TextView
                 style="@style/text_view_in_list"
-                android:id="@+id/default_text_view"/>
+                android:id="@+id/default_text_view"
+                tools:text="English"/>
 
         </LinearLayout>
+
+        <ImageView
+            android:id="@+id/play_btn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_play_btn"
+            />
+
     </LinearLayout>
 </LinearLayout>
