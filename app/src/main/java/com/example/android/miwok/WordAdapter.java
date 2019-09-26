@@ -1,7 +1,9 @@
 package com.example.android.miwok;
 
 import android.app.Activity;
-import android.support.v4.content.ContextCompat;
+
+import androidx.core.content.ContextCompat;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +18,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
     private int mColorResourceId;
 
-    public WordAdapter(Activity context, ArrayList<Word> words, int colorId){
+    public WordAdapter(Activity context, ArrayList<Word> words, int colorId) {
         super(context, 0, words);
         mColorResourceId = colorId;
     }
@@ -24,7 +26,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View listItemView = convertView;
-        if(listItemView == null) {
+        if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.list_item, parent, false);
         }
@@ -45,7 +47,7 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         TextView miwokTranslation = listItemView.findViewById(R.id.miwok_text_view);
         miwokTranslation.setText(currentWord.getMiwokWord());
-Log.i("WordAdapter", "Miwok set: " + currentWord.getMiwokWord());
+        Log.i("WordAdapter", "Miwok set: " + currentWord.getMiwokWord());
         TextView defaultTranslation = listItemView.findViewById(R.id.default_text_view);
         defaultTranslation.setText(currentWord.getDefaultWord());
         Log.i("WordAdapter", "English set to: " + currentWord.getDefaultWord());

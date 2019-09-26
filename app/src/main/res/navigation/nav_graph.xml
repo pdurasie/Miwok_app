@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.android.miwok.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" >
+        <action
+            android:id="@+id/action_mainActivity_to_colorsActivity"
+            app:destination="@id/colorsActivity" />
+        <action
+            android:id="@+id/action_mainActivity_to_familyActivity"
+            app:destination="@id/familyActivity" />
+        <action
+            android:id="@+id/action_mainActivity_to_numbersActivity"
+            app:destination="@id/numbersActivity" />
+        <action
+            android:id="@+id/action_mainActivity_to_phrasesActivity"
+            app:destination="@id/phrasesActivity" />
+    </activity>
+    <activity
+        android:id="@+id/familyActivity"
+        android:name="com.example.android.miwok.FamilyActivity"
+        android:label="word_list"
+        tools:layout="@layout/word_list" />
+    <activity
+        android:id="@+id/phrasesActivity"
+        android:name="com.example.android.miwok.PhrasesActivity"
+        android:label="word_list"
+        tools:layout="@layout/word_list" />
+    <activity
+        android:id="@+id/colorsActivity"
+        android:name="com.example.android.miwok.ColorsActivity"
+        android:label="word_list"
+        tools:layout="@layout/word_list" />
+    <activity
+        android:id="@+id/numbersActivity"
+        android:name="com.example.android.miwok.NumbersActivity"
+        android:label="word_list"
+        tools:layout="@layout/word_list" />
+</navigation>
